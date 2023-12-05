@@ -13,7 +13,7 @@ class Account {
   deposit( amount : number ) : void {
     if (amount <= 0)
       throw new Error('invalid amount')
-
+    // record a transaction
     this.balance += amount
   }
 
