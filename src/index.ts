@@ -1,21 +1,30 @@
-type Customer = {
-  birthday? : Date
-  // making birthday optional
+class Account {
+  id : number ;
+  owner : string ;
+  balance : number ;
+
+  constructor(id : number , owner : string, balance :number) {
+    this.id = id 
+    this.owner = owner 
+    this.balance = balance
+  }
+
+  deposit( amount : number ) : void {
+    if (amount <= 0)
+      throw new Error('invalid amount')
+
+    this.balance += amount
+  }
+
 }
 
-function getCustomer(id : number) : Customer | null |undefined {
-  return id === 0 ? null : {birthday : new Date()}
-  // if id is 0 return null otherwise customer object{birthday}
-}
+// using new we can create an object from existing class
+let account = new Account(1 , 'Mosh',0)
+account.deposit(1)
+console.log(account);
+// console.log(typeof account)
+console.log(account instanceof Account)
 
 
-let customer = getCustomer(1)
-// optional property access operator
-  console.log(customer?.birthday?.getFullYear()) //get full year
-  // gets executed if customer not null or undefined
-
-  // optional element access operator
-  let log : any = null
-
-  log?.('a')
-  // only executed if log reference a function
+// Union 
+// if (type of )
