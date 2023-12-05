@@ -1,19 +1,18 @@
 "use strict";
-let employeeObj = {
-    id: 1,
-    name: "Mosh",
-    retire: (date) => {
-        console.log(date);
+class Account {
+    constructor(id, owner, balance) {
+        this.id = id;
+        this.owner = owner;
+        this.balance = balance;
     }
-};
-function kgToLbs(weight) {
-    if (typeof weight === 'number') {
-        return weight * 2.2;
-    }
-    else {
-        return parseInt(weight) * 2.2;
+    deposit(amount) {
+        if (amount <= 0)
+            throw new Error('invalid amount');
+        this.balance += amount;
     }
 }
-kgToLbs(10);
-kgToLbs('10');
+let account;
+account = new Account(1, 'Mosh', 0);
+account.deposit(1);
+console.log(account);
 //# sourceMappingURL=index.js.map
