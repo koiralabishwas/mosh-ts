@@ -1,33 +1,37 @@
-class Account {
+class SeatAssignment {
+  // index signature property
+  [seatNumber : string] : string 
+}
+
+let seats = new SeatAssignment()
+
+seats.A1 = 'mosh'
+seats.A2 = 'josh'
 
 
-  constructor(
-    public readonly id : number ,
-    public owner : string,
-    private _balance :number ,
-    public nickname? : string) {
-  }
 
-  deposit( amount : number ) : void {
-    
-    if (amount <= 0)
-      throw new Error('invalid amount')
-    // record a transaction
-    
-    this._balance += amount
-  }
+seats['A1'] = 'ningma'
+seats['A3'] = 'mosh'
+// console.log(seats)
 
-  private calculateTax() {
+// this property has only soingle place in memory
+class Ride {
+// static property fixes its place in the memory
+  private static _activeRides : number = 0;
 
-  }
 
-  get balance() : number {
-    return this._balance
+  start() { Ride._activeRides++}
+  stop() {Ride._activeRides--}
+
+  static get activeRides() {
+    return Ride._activeRides
   }
 }
 
-// using new we can create an object from existing class
-let account = new Account(1 , 'Mosh',0)
-account.deposit(1)
+let ride1 = new Ride() ;
+ride1.start()
 
-console.log(account.balance)
+let ride2 = new Ride() ;
+ride2.start()
+
+console.log(Ride._activeRides);
