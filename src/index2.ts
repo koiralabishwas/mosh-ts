@@ -1,23 +1,16 @@
-// class KeyValuePair {
-//   constructor(
-//     public key : number ,
-//     public value : string
-//   ) {}
-// }
+// generic  interface
 
-// class StringKeyValuePair {
-//   constructor(
-//     public key : string ,
-//     public value : string
-//   ) {}
-// }
+// we have website 
 
-// let pair = new StringKeyValuePair('1',"asdfa")
-
-class KeyValuePair <Tkey , Tvalue> {
-  constructor(
-    public key : Tkey , public value : Tvalue
-  ) {}
+interface Result<T> {
+  data : T | null
+  error : string | null
 }
 
-let pair = new KeyValuePair<number , string>(1,"yes")
+function fetch(url : string) : Result<T>{
+  return {data : null , error : null}
+}
+
+interface User {
+  username : string;
+}
