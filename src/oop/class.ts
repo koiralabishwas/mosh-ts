@@ -49,5 +49,5 @@ console.log(bishwasAccount instanceof Account);
 // console.log(bishwasAccount.getBalance());
 bishwasAccount.nickname = "BBBBBB";
 console.log(bishwasAccount.nickname);
-bishwasAccount.balance = -1;
+// bishwasAccount.balance = -1;
 console.log(bishwasAccount.balance);
