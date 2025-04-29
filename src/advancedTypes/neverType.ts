@@ -6,5 +6,5 @@ function processEvent() : never {
 }
 
 processEvent()
-console.log("so this cant be run as the function's never returning")
+// console.log("so this cant be run as the function's never returning")
  
