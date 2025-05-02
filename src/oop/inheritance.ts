@@ -26,6 +26,7 @@ class Person {
 
   protected prot() {
     console.log('can be accessed in inherited class . cannot be accessed in object or inherited object')
+    this.priv()
   }
 }
 
