@@ -1,8 +1,8 @@
+// @ts-check
+
 /**
- * calculate income tax 
- * @param {number} income - net salary after expenses
- * @returns {number}
+ * @param {number} income
  */
-export function calculateTax(income) {
+export function calculateTax(income ) {
   return income * 0.3
 }
