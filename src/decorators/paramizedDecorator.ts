@@ -11,6 +11,7 @@ function PComponent(options : ComponentOptions) {
     constructor.prototype.uniqueId = Date.now()
     constructor.prototype.insertInDom = () => {
       console.log('inserting the component in the dom')
+      console.log(options.selector) // not used エラー回避用
     }
   }
 }
