@@ -15,9 +15,9 @@ class Person_ {
     return this.firstName + " " + this.lastName
   }
 
-  private fuckOff(){
-    console.log('fuck')
-  }
+  // private fuckOff(){
+  //   console.log('fuck')
+  // }
 
 }
 

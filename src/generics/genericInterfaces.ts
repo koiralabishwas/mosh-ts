@@ -3,7 +3,7 @@ interface Result<T>{
   error : string |null 
 }
 
-function fechhh<T>(url : string) : Result<T> {
+function fechhh<T>(_url : string) : Result<T> {
   return {data : null , error : null}
 }
 

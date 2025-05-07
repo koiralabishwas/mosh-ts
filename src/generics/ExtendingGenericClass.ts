@@ -34,7 +34,7 @@ class SearchableStore<T extends {name : string }> extends Store<T> {
 
 // Fix ? Terminate ?? the generic type parameter
 class ProuductStore extends Store<Prouduct> {
-  filterByCategory(category : string) : Prouduct[] {
+  filterByCategory(_category : string) : Prouduct[] {
     return []
   }
 }
